@@ -8,13 +8,19 @@ module.exports = {
     },
     module: {
         rules: [
-           {
-             test: /\.css$/,
-             use: [
-               'style-loader',
-               'css-loader'
-             ]
-           }
+            {
+                test: /\.css$/,
+                use: [
+                    'style-loader',
+                    'css-loader'
+                ]
+            },
+            { // ctrl+alt+l
+                test: /\.(png|svg|jpg|gif)$/,
+                use: [
+                    'file-loader'
+                ]
+            }
         ]
     }
 };
